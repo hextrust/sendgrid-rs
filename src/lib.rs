@@ -62,6 +62,9 @@ pub mod error;
 mod mail;
 pub mod v3;
 
+#[cfg(feature = "async")]
+pub mod template;
+
 pub use client::SGClient;
 pub use error::{SendgridError, SendgridResult};
 pub use mail::{Destination, Mail};
